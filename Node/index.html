@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io();
+	socket.emit('join', {
+	  id: '0',
+	  nama: 'Anymore',
+	  bio: '',
+	  token: '5005',
+	  type: 'company',
+	  foto: '1_111477.jpg'
+	});
+	socket.on('disconnect', function(data){
+		console.log('server disconnect')
+	});
+</script>
+</body>
+</html>
